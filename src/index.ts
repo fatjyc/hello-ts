@@ -1,7 +1,7 @@
 import { Greeter } from "./lib/greeter";
 import * as readline from "node:readline";
 
-console.info("Please Input Language (en, es, fr, de):");
+console.info("Please Input Language (en, es, fr, de ... and more):");
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout,
