@@ -1,0 +1,21 @@
+version: "0.1"
+env:
+  image: ghcr.io/babelcloud/babel-agent-test:dece961
+  credential: "{{credential}}"
+global:
+  setup:
+    - npm install -g yarn
+    - yarn install
+pipeline:
+  runTest:
+    pre:
+      - echo "pre"
+    exec:
+      - npx vitest run {{testFilePath}}
+    post:
+      - npx tsc --noEmit
+settings:
+  exportFunctionOrClass: allow
+  mockIgnore:
+    - lodash
+    - lodash-es
