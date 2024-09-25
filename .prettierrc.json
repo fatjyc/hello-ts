@@ -1,0 +1,23 @@
+{
+    "singleQuote": false,
+    "printWidth": 100,
+    "tabWidth": 4,
+    "semi": true,
+    "useTabs": false,
+    "parser": "typescript",
+    "trailingComma": "none",
+    "overrides": [
+        {
+            "files": [
+                ".prettierrc.json",
+                "lerna.json",
+                "package.json",
+                ".eslintrc.json",
+                "tsconfig.json"
+            ],
+            "options": {
+                "parser": "json"
+            }
+        }
+    ]
+}
